@@ -1,5 +1,6 @@
 import BankAccount;
 #include "CompoundInterest.hpp"
+#include <cmath>
 
 export module Finance;
 
@@ -11,7 +12,7 @@ public:
 
     double calculate_compound_interest(double rate, int years) {
         double principal = get_balance();
-        return principal * pow(1.0 + rate, years);
+        return principal * std::pow(1.0 + rate, years);
     }
 };
 
